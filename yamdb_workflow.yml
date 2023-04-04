@@ -46,6 +46,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             context: ./api_yamdb
+            dockerfile: ./api_yamdb/Dockerfile
             push: true
             tags: kokos02r2/api_yamdb:latest
 
