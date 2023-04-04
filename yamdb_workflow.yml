@@ -57,7 +57,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: kokos02r2/api_yamdb:latest
+            tags: kokos02r2/api_yamdb:v1.1.1000
 
   deploy:
       runs-on: ubuntu-latest
