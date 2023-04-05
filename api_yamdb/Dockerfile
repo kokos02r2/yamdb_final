@@ -4,10 +4,12 @@ RUN apt-get update && apt-get install -y libpq-dev gcc
 
 WORKDIR /app
 
+ENV APP_HOME=/app
+
 COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt --no-cache-dir
 
-COPY ./api_yamdb .
+COPY ./api_yamdb $APP_HOME
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
