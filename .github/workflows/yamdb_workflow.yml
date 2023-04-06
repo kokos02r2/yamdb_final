@@ -59,8 +59,7 @@ jobs:
           with:
             host: ${{ secrets.HOST }}
             username: ${{ secrets.USER }}
-            key: ${{ secrets.SSH_KEY }}
-            passphrase: ${{ secrets.PASSPHRASE }}
+            password: ${{ secrets.PASSWORD }}
             script: |
               sudo docker-compose stop
               sudo docker-compose rm web
